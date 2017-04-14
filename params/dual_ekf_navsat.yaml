@@ -34,7 +34,7 @@ ekf_odom:
                 #     x,     y,     z,
     imu0_config: [false, false, false,
                 #     r,     p,     y,                
-                  true, true, false,
+                  true, true, true,
                 #    dx,    dy,    dz,
                   false, false, false,
                 #    dr,    dp,    dy,
