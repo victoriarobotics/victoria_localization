@@ -22,7 +22,7 @@ ekf_odom:
                 #     dx,    dy,    dz,
                    true,  true,  false,
                 #     dr,    dp,    dy,
-                   false, false, false,
+                   false, false, true,
                 #    ddx,   ddy,   ddz
                    false, false, false]
     odom0_queue_size: 10
@@ -34,11 +34,11 @@ ekf_odom:
                 #     x,     y,     z,
     imu0_config: [false, false, false,
                 #     r,     p,     y,                
-                  true, true, true,
+                  true, true, false,
                 #    dx,    dy,    dz,
                   false, false, false,
                 #    dr,    dp,    dy,
-                  true,  true,   true,
+                  true,  true,   false,
                 #   ddx,   ddy,   ddz
                   false, false, false]
     imu0_nodelay: false
