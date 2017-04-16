@@ -6,12 +6,13 @@
     <node pkg="robot_localization" type="ekf_localization_node" name="ekf_odom" clear_params="true"/>
 
     <!-- map -> odom transform -->
-    <!--node pkg="robot_localization" type="ekf_localization_node" name="ekf_map" clear_params="true">
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_map" clear_params="true">
         <remap from="odometry/filtered" to="odometry/filtered_map"/>
-    </node-->
+    </node>
 
-    <!--node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" clear_params="true">
+    <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" clear_params="true">
         <remap from="odometry/filtered" to="odometry/filtered_map"/>
-    </node-->
+        <remap from="gps/fix" to="/fix"/>
+    </node>
 
 </launch>
