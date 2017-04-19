@@ -18,11 +18,11 @@ ekf_odom:
                 #      x,     y,     z,
     odom0_config: [true, true, false,
                 #      r,     p,     y,                
-                   false, false, true,
+                   false, false, false,
                 #     dx,    dy,    dz,
                    false, false,  false,
                 #     dr,    dp,    dy,
-                   false, false, true,
+                   false, false, false,
                 #    ddx,   ddy,   ddz
                    false, false, false]
     odom0_queue_size: 10
@@ -34,11 +34,11 @@ ekf_odom:
                 #     x,     y,     z,
     imu0_config: [false, false, false,
                 #     r,     p,     y,                
-                  true, true, false,
+                  true, true, true,
                 #    dx,    dy,    dz,
                   false, false, false,
                 #    dr,    dp,    dy,
-                  true,  true,   false,
+                  false, false,  false,
                 #   ddx,   ddy,   ddz
                   false, false, false]
     imu0_nodelay: false
@@ -98,8 +98,8 @@ ekf_map:
     
     odom0: odom
     odom0_config: [false, false, false,
-                   false, false, true,
-                   true,  true,  false,
+                   false, false, false,
+                   false, false, false,
                    false, false, false,
                    false, false, false]
     odom0_queue_size: 10
@@ -108,7 +108,7 @@ ekf_map:
     odom0_relative: false
     
     odom1: odometry/gps
-    odom1_config: [true,  true,  false,
+    odom1_config: [false, false, false,
                    false, false, false,
                    false, false, false,
                    false, false, false,
@@ -120,9 +120,9 @@ ekf_map:
     
     imu0: imu/data
     imu0_config: [false, false, false,
-                  true,  true,  false,
+                  true,  true,  true,
                   false, false, false,
-                  true,  true,  false,
+                  false,  false,  false,
                   false,  false,  false]
     imu0_nodelay: true
     imu0_differential: false
