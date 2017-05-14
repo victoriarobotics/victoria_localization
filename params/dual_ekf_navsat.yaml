@@ -38,7 +38,7 @@ ekf_odom:
                 #    dx,    dy,    dz,
                   false, false, false,
                 #    dr,    dp,    dy,
-                  true,  true,   false,
+                  true,  true,   true,
                 #   ddx,   ddy,   ddz
                   false, false, false]
     imu0_nodelay: false
@@ -123,7 +123,7 @@ ekf_map:
     imu0_config: [false, false, false,
                   true,  true,  true,
                   false, false, false,
-                  true,  true,  false,
+                  true,  true,  true,
                   false, false, false]
     imu0_nodelay: true
     imu0_differential: false
